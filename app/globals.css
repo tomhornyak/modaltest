@@ -2,26 +2,98 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+html::-webkit-scrollbar,
+Table::-webkit-scrollbar {
+  width: 10px;
+}
+html::-webkit-scrollbar-track,
+Table::-webkit-scrollbar-track {
+  background: rgb(179, 177, 177);
+  border-radius: 10px;
+}
+html::-webkit-scrollbar-thumb,
+Table::-webkit-scrollbar-thumb {
+  background: rgb(136, 136, 136);
+  border-radius: 10px;
+}
+html::-webkit-scrollbar-thumb:hover,
+Table::-webkit-scrollbar-thumb:hover {
+  background: rgb(100, 100, 100);
+  border-radius: 10px;
+}
+html::-webkit-scrollbar-thumb:active,
+Table::-webkit-scrollbar-thumb:active {
+  background: rgb(68, 68, 68);
+  border-radius: 10px;
+}
+html,
+Table {
+  scrollbar-width: thin;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+html body {
+  height: 100%;
+  background-color: #d0dcea;
+  background-image: linear-gradient(#eeeeea, #d0dcea);
+  background-repeat: space;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+h1 {
+  font-size: 1.2rem;
+}
+
+.blue-gradient {
+  background-image: linear-gradient(#eeeeea, #d0dcea);
+  background-repeat: space;
+}
+
+.styledHeader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 15px;
+  background: lightblue;
+  font-weight: bolder;
+}
+
+.styledInput {
+  padding: 14px 4px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  height: 10px;
+  width: 274px;
+}
+
+.styledLabel {
+  font-weight: bold;
+  display: inline-block;
+  width: 100px;
+  text-align: left;
+  padding-right: 5px;
+}
+
+.styledSubmit {
+  padding: 8px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.styledSubmit:hover {
+  background-color: #0088f8;
+}
+
+.styledSubmitDisabled {
+  padding: 8px 10px;
+  margin-right: 5px;
+  background-color: gray;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.styledModal {
+  padding: 1rem 2rem 1rem !important;
 }
